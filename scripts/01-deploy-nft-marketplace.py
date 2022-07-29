@@ -1,7 +1,8 @@
 from brownie import accounts, NftMarketplace
+from scripts.helpful_scripts import get_account
 
 def deploy_nft_marketplace():
-    account = accounts[0]
+    account = get_account()
     print("Deploying NftMarketplace...")
     nft_marketplace = NftMarketplace.deploy({
         "from": account

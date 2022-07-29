@@ -1,14 +1,16 @@
 from brownie import NftMarketplace, BasicNft, accounts
 from web3 import Web3
+from scripts.helpful_scripts import get_account
 
 PRICE = Web3.toWei("0.1", "ether")
 
 def mint_and_list():
+    account = get_account()
     nft_marketplace = NftMarketplace.deploy({
-        "from": accounts[0]
+        "from": account
     })
     basic_nft = BasicNft.deploy({
-        "from": accounts[0]
+        "from": account
     })
     print("Minting...")
     mint_tx_receipt = basic_nft.mintNft()
