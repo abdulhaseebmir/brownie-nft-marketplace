@@ -6,7 +6,7 @@ def deploy_nft_marketplace():
     print("Deploying NftMarketplace...")
     nft_marketplace = NftMarketplace.deploy({
         "from": account
-    })
+    }, publish_source=True)
     print(f"Deployed NftMarketplace at: {nft_marketplace.address}")
 
 
