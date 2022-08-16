@@ -8,6 +8,7 @@ def deploy_basic_nft():
         "from": account
     }, publish_source=True)
     print(f"Deployed Basic Nft at: {basic_nft.address}")
+    return basic_nft.address
 
 def main():
     deploy_basic_nft()

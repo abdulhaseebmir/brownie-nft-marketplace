@@ -8,6 +8,7 @@ def deploy_nft_marketplace():
         "from": account
     }, publish_source=True)
     print(f"Deployed NftMarketplace at: {nft_marketplace.address}")
+    return nft_marketplace.address
 
 
 def main():
